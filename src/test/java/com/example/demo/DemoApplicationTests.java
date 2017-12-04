@@ -127,8 +127,11 @@ public class DemoApplicationTests {
 	public void sendSimpleMail() throws Exception {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setFrom("13201692120@163.com");
+		//给自己发送一份,可以解决被当成垃圾邮件的问题.
 		message.setTo("13201692120@163.com");
-		message.setSubject("主题：简单邮件");
+        //message.setTo("3025463144@qq.com");
+        message.setTo("huifan@hollycrm.com");
+		message.setSubject("新建的邮箱");
 		message.setText("测试邮件内容");
 		mailSender.send(message);
 	}
